@@ -1,0 +1,30 @@
+{
+    "name": "abdi.zbn/simple-audit-log",
+    "license": "MIT",
+    "keywords": ["Laravel", "Audit", "Log", "Eloquent"],
+    "authors": [
+        {
+            "name": "Zeinab Abdi",
+            "email": "abdi.zbn@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">5.5.0",
+        "illuminate/database": ">=5.0",
+        "illuminate/support": ">=5.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "AbdiZbn\\SimpleAuditLog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AbdiZbn\\SimpleAuditLog\\SimpleAuditLogServiceProvider"
+            ]
+        }
+    }
+}
