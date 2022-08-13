@@ -1,4 +1,11 @@
 # simple-audit-log
+
+[![Version](http://poser.pugx.org/abdi.zbn/simple-audit-log/v)](https://packagist.org/packages/abdi.zbn/simple-audit-log)
+[![License](http://poser.pugx.org/abdi.zbn/simple-audit-log/license)](https://packagist.org/packages/abdi.zbn/simple-audit-log)
+[![composer.lock](http://poser.pugx.org/abdi.zbn/simple-audit-log/composerlock)](https://packagist.org/packages/abdi.zbn/simple-audit-log)
+[![PHP Version Require](http://poser.pugx.org/abdi.zbn/simple-audit-log/require/php)](https://packagist.org/abdi.zbn/simple-audit-log/phpunit)
+[![.gitattributes](http://poser.pugx.org/abdi.zbn/simple-audit-log/gitattributes)](https://packagist.org/packages/abdi.zbn/simple-audit-log)
+
 Laravel Simple Audit Log Package
 ============
 
