@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class AuditLog extends Model
 {
-    public $timestamps = false;
+    protected $table = 'audit_log';
 
-    protected $dates = ['created_at'];
+    public $timestamps = false;
 
     protected $fillable = [
         'old_values',
