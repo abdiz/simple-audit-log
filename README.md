@@ -17,8 +17,6 @@ This Package makes it easy to keep the history of the Eloquent's Model changes. 
 |---------|-----------|
 | 13.x    | 8.3 - 8.5 |
 | 12.x    | 8.2 - 8.5 |
-| 11.x    | 8.2 - 8.4 |
-| 10.x    | 8.1 - 8.3 |
 
 #### Composer Install
 
@@ -34,7 +32,7 @@ php artisan migrate
 ```
 
 
-The package will be auto-discovered by Laravel. If you have disabled package discovery, register the service provider manually (in `bootstrap/providers.php` for Laravel 11+, or in the `providers` array of `config/app.php` for Laravel 10).
+The package will be auto-discovered by Laravel. If you have disabled package discovery, register the service provider manually in `bootstrap/providers.php`.
 ```php
 \AbdiZbn\SimpleAuditLog\SimpleAuditLogServiceProvider::class,
 ```
