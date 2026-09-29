@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAuditLogTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -20,10 +20,10 @@ class CreateAuditLogTable extends Migration
             $table->json('new_values');
             $table->string('event');
             $table->string('module');
-            $table->tinyInteger('module_id')->unsigned();
+            $table->unsignedBigInteger('module_id');
 
-            $table->integer('user_id')->unsigned();
-            $table->ipAddress('ip');
+            $table->unsignedBigInteger('user_id');
+            $table->ipAddress('ip')->nullable();
             $table->string('user_agent')->nullable();
 
             $table->dateTime('created_at')->useCurrent();
@@ -42,4 +42,4 @@ class CreateAuditLogTable extends Migration
     {
         Schema::dropIfExists('audit_log');
     }
-}
+};

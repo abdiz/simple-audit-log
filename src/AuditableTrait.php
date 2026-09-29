@@ -79,7 +79,7 @@ trait AuditableTrait
      */
     public function audits($limit = 100, $order = 'desc')
     {
-        return $this->hasMany(AuditLog::class, 'module')
+        return $this->hasMany(AuditLog::class, 'module_id')
             ->where('module', $this->getModule())
             ->orderBy('created_at', $order)
             ->limit($limit);
@@ -235,7 +235,7 @@ trait AuditableTrait
             $audit->old_values = json_encode($old);
             $audit->new_values = json_encode($new);
             $audit->module = $this->getModule();
-            $audit->module_id = $this->getModule();
+            $audit->module_id = $this->getModuleId();
             $audit->ip = $this->getUserIp();
             $audit->user_agent = $this->getUserAgent();
 
@@ -284,8 +284,8 @@ trait AuditableTrait
      */
     private function getModuleId()
     {
-        if ($this->id) {
-            return $this->id;
+        if ($this->getKey()) {
+            return $this->getKey();
         }
 
         return 0;
